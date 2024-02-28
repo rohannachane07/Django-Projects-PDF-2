@@ -1,0 +1,28 @@
+<!-- query_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Query Form</title>
+</head>
+<body>
+    <h1>Book Query Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_book_name">Book Name:</label>
+            {{ form.book_name }}
+        </div>
+        <div>
+            <label for="id_author">Author:</label>
+            {{ form.author }}
+        </div>
+        <div>
+            <label for="id_publication_year">Publication Year:</label>
+            {{ form.publication_year }}
+        </div>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
